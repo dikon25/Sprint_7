@@ -8,4 +8,4 @@ class TestOrderList:
     def test_get_order_list(self):
         r=requests.get(Url.all_orders)
         assert r.status_code==200
-        assert'"orders"' in r.text
+        assert Answers.TRACK_ORDER in r.text

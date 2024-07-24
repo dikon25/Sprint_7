@@ -13,5 +13,5 @@ class TestOrder:
         payload['color'] = color
         r = requests.post(Url.create_order_url, data=json.dumps(payload))
         assert r.status_code == 201
-        assert '"track"' in r.text
+        assert Answers.TRACK_ORDER in r.text
 
